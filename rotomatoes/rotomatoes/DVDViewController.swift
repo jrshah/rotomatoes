@@ -82,6 +82,7 @@ class DVDViewController: UIViewController, UITableViewDataSource {
                 //show network error
                 if (error?.code)! as Int == -1009 {
                     self.dvdNetworkErrorView.viewWithTag(0)?.hidden = false
+                    SVProgressHUD.dismiss()
                 }
             } else {
                 self.dvdNetworkErrorView.viewWithTag(0)?.hidden = true

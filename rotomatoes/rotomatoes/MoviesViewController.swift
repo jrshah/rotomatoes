@@ -82,6 +82,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
                 //show network error
                 if (error?.code)! as Int == -1009 {
                     self.networkErrorView.viewWithTag(20)?.hidden = false
+                    SVProgressHUD.dismiss()
                 }
             } else {
                 self.networkErrorView.viewWithTag(20)?.hidden = true
